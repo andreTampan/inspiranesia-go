@@ -1,11 +1,12 @@
 package echo
 
 import (
-	"github.com/labstack/echo/v4"
 	"inspiranesia/system/config"
 	"inspiranesia/system/logging"
 	"net/http"
 	"strconv"
+
+	"github.com/labstack/echo/v4"
 )
 
 type EchoHttpHandler struct {
@@ -17,7 +18,7 @@ type EchoHttpHandler struct {
 
 func New(server config.Server, logger logging.NougatLoggingProvider) *EchoHttpHandler {
 	return &EchoHttpHandler{
-		port:        server.Port,
+		port:        server.PortEcho,
 		rootName:    server.RootName,
 		httpHandler: echo.New(),
 		logger:      logger,
@@ -30,5 +31,5 @@ func (e EchoHttpHandler) Start() {
 }
 
 func (e EchoHttpHandler) defaultRootEndpoint(c echo.Context) error {
-	return c.String(http.StatusOK, "This is default end point using echo :)")
+	return c.String(http.StatusOK, "This is default end point using echo :) kuda")
 }

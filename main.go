@@ -2,10 +2,11 @@ package main
 
 import (
 	"context"
-	"go.uber.org/fx"
 	"inspiranesia/system/config"
 	"inspiranesia/system/http"
 	"inspiranesia/system/logging"
+
+	"go.uber.org/fx"
 )
 
 func main() {

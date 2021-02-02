@@ -1,4 +1,5 @@
 server :
   root-name: "/"
-  http-handler: "echo"
+  http-handler: "iris"
   port: 8080
+  port-echo: 8081

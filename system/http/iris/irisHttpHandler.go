@@ -1,10 +1,11 @@
 package iris
 
 import (
-	"github.com/kataras/iris/v12"
 	"inspiranesia/system/config"
 	"inspiranesia/system/logging"
 	"strconv"
+
+	"github.com/kataras/iris/v12"
 )
 
 type IrisHttpHandler struct {
@@ -29,5 +30,5 @@ func (i IrisHttpHandler) Start() {
 }
 
 func (i IrisHttpHandler) defaultRootEndpoint(ctx iris.Context) {
-	ctx.WriteString("This is default end point using iris :)")
+	ctx.WriteString("This is default end point using iris :) sempak")
 }

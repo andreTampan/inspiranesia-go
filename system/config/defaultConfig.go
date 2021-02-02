@@ -5,10 +5,8 @@ type DefaultConfig struct {
 }
 
 type Server struct {
-	Port int
-	RootName string `mapstructure:"root-name"`
+	Port        int
+	PortEcho    int    `mapstructure:"port-echo"`
+	RootName    string `mapstructure:"root-name"`
 	HttpHandler string `mapstructure:"http-handler"`
 }
-
-
-
